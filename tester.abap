@@ -19,6 +19,7 @@ DATA: iT_bkpf TYPE TABLE OF bkpf,
 DATA ok_code TYPE sy-ucomm.
 
 
+
 "Declaration of Selection-options for the range of accounting documents
 SELECTION-SCREEN BEGIN OF BLOCK part1 WITH FRAME .
   SELECT-OPTIONS:
@@ -27,6 +28,10 @@ SELECTION-SCREEN BEGIN OF BLOCK part1 WITH FRAME .
                  gjahr FOR bkpf-gjahr OBLIGATORY.
 
 SELECTION-SCREEN END OF BLOCK part1.
+
+*----------------------------------------------------------------------*
+* CLASS lcl_event_handler DEFINITION
+*----------------------------------------------------------------------*
 
 "Definition and implementation of the double-click
 CLASS lcl_event_handler DEFINITION.
