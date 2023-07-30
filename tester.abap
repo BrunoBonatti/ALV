@@ -39,6 +39,10 @@ CLASS lcl_event_handler DEFINITION.
     METHODS: on_double_click FOR EVENT double_click OF cl_gui_alv_grid IMPORTING e_row.
 ENDCLASS.
 
+*----------------------------------------------------------------------*
+* CLASS lcl_event_handler IMPLEMENTATION
+*----------------------------------------------------------------------*
+
 CLASS lcl_event_handler IMPLEMENTATION.
 
   METHOD on_double_click.
