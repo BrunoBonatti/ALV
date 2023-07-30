@@ -1,10 +1,19 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=bda29c&height=120&section=header"/> 
 
-# Project Alv 
+# Project Description
 
-Dado um range de docunentos por empresa/ano, exibir relatóro em ALV Grid com o dos documentos contábeis. Em caso de duplo clique em uma linha do header, os itens deveráo ser exibidos em um segundo  ALV Grid.
+  The aim of this project is to develop a system that allows the user to view a report in ALV Grid format containing the header of accounting documents based on a specific range of documents by company and year. Additionally, upon double-clicking on a header row, the related items will be displayed in a second ALV Grid for a detailed view.
 
-Caso o usuário ensirra um dado inexistente no range exiba uma mensagem de erro e o campo deve estar disponivel para correçao 
+### Key Features
 
+✔️ Display a report in ALV Grid format with the header of accounting documents, filtered by the user-selected company and year range.
+
+✔️ Upon double-clicking on a header row, present the related items for the selected document in a second ALV Grid for a detailed view.
+
+✔️ Handle situations with missing or invalid data: if the user enters nonexistent data within the specified range, an error message should be displayed, allowing the user to correct the field to avoid inconsistencies.
+
+<br>
+
+# 📷 Telas
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=bda29c&height=120&section=footer"/>
