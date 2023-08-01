@@ -5,9 +5,7 @@
 *&---------------------------------------------------------------------*
 REPORT z_alv.
 
-LOAD-OF-PROGRAM.
-""Declaration of Tables
-TABLES: bkpf, bseg , sscrfields.
+TABLES: bkpf, bseg, sscrfields.
 
 " Declaration of the global variables
 DATA: r_container_01 TYPE REF TO cl_gui_custom_container,
@@ -36,11 +34,20 @@ SELECTION-SCREEN PUSHBUTTON /15(12) TEXT-002 USER-COMMAND PB_CLICK.
 
 SELECTION-SCREEN END OF BLOCK part1.
 
+
+*----------------------------------------------------------------------*
+* CLASS lcl_event_handler DEFINITION
+*----------------------------------------------------------------------*
+
 "Definition and implementation of the double-click
 CLASS lcl_event_handler DEFINITION.
   PUBLIC SECTION.
     METHODS: on_double_click FOR EVENT double_click OF cl_gui_alv_grid IMPORTING e_row.
 ENDCLASS.
+
+*----------------------------------------------------------------------*
+* CLASS lcl_event_handler IMPLEMENTATION
+*----------------------------------------------------------------------*
 
 CLASS lcl_event_handler IMPLEMENTATION.
 
@@ -150,7 +157,7 @@ START-OF-SELECTION.
   CREATE OBJECT r_lcl_event_handler.
   SET HANDLER r_lcl_event_handler->on_double_click FOR ALL INSTANCES.
 
-  "screen call and its content
+  "Screen call and its content
   CALL SCREEN 0100.
   INCLUDE z_alv_o01.
   INCLUDE z_alv_010i01.
